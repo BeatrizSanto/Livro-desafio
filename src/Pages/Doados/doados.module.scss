@@ -4,12 +4,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .boxcard{
-    width: 80vw;
+    width: 85vw;
     height: 60vh;
+    display: flex;
+    justify-content: space-evenly;
    
     article{
         border: solid 2px #005695;
@@ -22,3 +24,34 @@
         border-radius: 15px;
     }
     }
+
+
+    @media(max-width: 1000px){
+        .boxDoados{
+            justify-content: space-around;
+            
+        }
+    
+        .boxcard{
+            
+            article{
+                width: 200px;
+                height: 230px;
+            }
+        }
+    }
+    
+    @media(max-width: 520px){
+        .boxcard{
+            flex-wrap: wrap;
+            gap: 10px;
+            height: auto;
+        }
+    
+        .boxDoados{
+            height: auto;
+            padding-bottom: 20px;
+        }
+    }
+
+   

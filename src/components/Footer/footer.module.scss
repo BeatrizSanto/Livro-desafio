@@ -27,3 +27,26 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+
+@media(max-width: 1000px){
+    .boxSocial{
+        nav{
+            // border: solid 2px red;
+            width: 220px;
+        }
+    }
+}
+
+@media(max-width: 479px){
+    .boxSocial{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .boxEnd{
+        p{
+            text-align: center;
+        }
+    }
+}

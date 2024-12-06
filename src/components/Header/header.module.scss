@@ -1,6 +1,5 @@
 
 header{
-    // border: solid 2px red;
     height: 15vh;
     display: flex;
     align-items: center;
@@ -9,7 +8,7 @@ header{
 }
 
 .boxlogo{
-    // border: solid 2px yellow;
+   
     width: 23vw;
     display: flex;
     color: white;
@@ -19,15 +18,15 @@ header{
 }
 
 .boxMenu{
-    // border: solid 2px greenyellow;
+   
     width: 35vw;
     ul{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        font-size: 20px;
         a{
-            color: white;
-            font-size: 20px;
+            color: white;   
         }
     }
 }
@@ -42,15 +41,67 @@ header{
     justify-content: space-around;
     border-radius: 15px;
     input{
+        width: 12vw;
         background-color: transparent;
         outline: none;
         border: none;
         color: white;
         font-size: 15px;
-        padding-left: 6px;
-        width: 12vw;
         &::placeholder{
             color:white;
+        }
+    }
+}
+
+@media(max-width: 1134px){
+
+    .boxlogo{
+
+        width: 25vw;
+        h1{
+            font-size: 1.9vw;
+        }
+        img{
+            width: 5vw;
+        }
+    }
+    .boxMenu{
+        ul{
+            font-size: 1.7vw;
+        }
+    }
+    .boxInput{
+        width: 18vw;
+        input{
+            &::placeholder{
+                font-size: 1.2vw;
+            }
+        }
+    }
+}
+@media(max-width: 760px){
+    herder{
+        height: 25vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .boxInput{
+        display: none;
+    }
+    .boxlogo{
+        width: 80%;
+        h1{
+            font-size: 25px;
+        }
+        img{
+            width: 60px;
+        }
+    }
+    .boxMenu{
+        width: 100%;
+        ul{
+            justify-content: space-evenly;
+            font-size: 21px;
         }
     }
 }
