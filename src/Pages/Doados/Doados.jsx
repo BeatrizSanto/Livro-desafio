@@ -9,10 +9,15 @@ export default function Doados(){
 
     const [livros, setLivros] = useState([])
 
-    const getLivros = async () =>{
-        const response = await axios.get("https://api-livros-1.onrender.com/livros")
-        setLivros(response.data)
+    const getLivros = async () => {
+        try {
+            const response = await axios.get("https://api-livros-1.onrender.com/livros")
+            setLivros(response.data)
+        } catch (error) {
+            console.error("Erro ao buscar livros:", error)
+        }
     }
+    
 
     useEffect(()=>{
         getLivros()
